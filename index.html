@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Физический тренажёр</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Физический тренажёр</h1>
+
+    <label for="difficulty">Выберите уровень:</label>
+    <select id="difficulty">
+      <option value="Лёгкий">Лёгкий</option>
+      <option value="Средний">Средний</option>
+      <option value="Сложный">Сложный</option>
+    </select>
+
+    <div class="question-block">
+      <p id="question">Загрузка...</p>
+      <p id="section"></p>
+    </div>
+
+    <input type="text" id="answer" placeholder="Введите ваш ответ">
+    <div class="buttons">
+      <button onclick="submitAnswer()">Ответить</button>
+      <button onclick="showHint()">Подсказка</button>
+    </div>
+
+    <div id="hint" class="hint"></div>
+    <div id="score" class="score"></div>
+    <div id="achievements"></div>
+
+    <h2>🏅 Таблица рекордов</h2>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
